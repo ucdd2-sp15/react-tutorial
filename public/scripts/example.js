@@ -74,6 +74,9 @@ var CommentBox = React.createClass({
     },
     handleCommentSubmit: function(comment) {
         // TODO: submit to the server and refresh the lis
+        var comments = this.state.data;
+        var newComments = comments.concat([comment]);
+        this.setState({data: newComments});
         $.ajax({
               url: this.props.url,
               dataType: 'json',
