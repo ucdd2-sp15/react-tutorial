@@ -18,20 +18,20 @@ var Comment = React.createClass({
 ```
 ### Q1: Where does the value of ``this.props.author`` get specified?
 
-{{ your answer here }}
+It is declared inside of the Comments class, but the value is ultimately pulled from the json *database*.
 
 ### Q2: Where does the value of ``this.props.children`` get specified?
 
-{{ your answer here }}
+It is declared inside of the Comments class, but the value is the text values for a particular author pulled from the json *database*.
 
 
 ### Q3: What does ``className="comment"`` do?
 
-{{ your answer here }}
+It gives the HTML div element a specific className. This can be used for refenerence later.
 
 ### Q4: What is ``dangerouslySetInnerHTML``? Why is it such a long word for an API method?
 
-{{ your answer here }}
+It allows us to use a method which is not secure, and HTML injections are possible. It is noticably long possibly for the sake of developer recognition or deterrence.
 
 # CommentBox
 ```javascript
@@ -53,11 +53,11 @@ var CommentBox = React.createClass({
 
 ### Q5: How does ``$`` get defined? Is it part of the ReactJS framework?
 
-{{your answer here}}
+$ is the definition of ajax. It is defined by something akin to ``var $ = require('ajax');``. It is included as part of jQuery.
 
 ### Q6: Where does the value of ``this.props.url`` get specified?
 
-{{your answer here}}
+The url is ultimately passed on from the ``React.render`` call.
 
 
 ### Q7: What would happen to the statement ``this.setState`` if ``bind(this)`` is removed? Why?
