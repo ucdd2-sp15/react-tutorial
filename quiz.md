@@ -18,7 +18,7 @@ var Comment = React.createClass({
 ```
 ### Q1: Where does the value of ``this.props.author`` get specified?
 
-{It is set in CommentList, the parent class, when constructing a new Comment React class and including author as a property.}
+{{It is set in CommentList, the parent class, when constructing a new Comment React class and including author as a property.}}
 
 ### Q2: Where does the value of ``this.props.children`` get specified?
 
