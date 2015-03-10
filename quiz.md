@@ -18,7 +18,7 @@ var Comment = React.createClass({
 ```
 ### Q1: Where does the value of ``this.props.author`` get specified?
 
-{{ your answer here }}
+Within the 'Comment' variable, 'this.props.author' gets displayed. The VALUE of 'this.props.author', however gets set within the 'CommentForm' variable. In other words, once a user makes a comment, whatever is in the 'Your name' field gets stored in the JSON data object as 'this.props.author'.
 
 ### Q2: Where does the value of ``this.props.children`` get specified?
 
@@ -57,7 +57,7 @@ var CommentBox = React.createClass({
 
 ### Q6: Where does the value of ``this.props.url`` get specified?
 
-{{your answer here}}
+This url gets specified at the bottom of the file in the React.render() function. For our purposes, it is set as the 'comments.json file' within our own directory, but - more realistically - this would be set to some url online where the data we are fetching would be hosted. Once specified, 'this.props.url' in the 'CommentBox' variable refers to that unchanging trait of the variable itself - in this case the data url. 
 
 
 ### Q7: What would happen to the statement ``this.setState`` if ``bind(this)`` is removed? Why?
@@ -122,7 +122,7 @@ var CommentBox = React.createClass({
 
 ### Q11: What is the new value of ``this.state.data``? How is this new value set?
 
-{{your answer here}}
+The new value of 'this.state.data' includes all of the comment data from before, plus whatever new data was just fetched from the server. This new value is only ever set when we have a  'this.setState({data: data})' line. This says if the request for data from the server was successful, set 'this.state.data' to the new data value(s) from that server call.
 
 
 ### Q12: What is the purpose of ``componentDidMount`` callback?
@@ -168,7 +168,7 @@ var CommentList = React.createClass({
 
 ### Q16: Where does the value of ``{comment.text}`` go on the rendered page?
 
-{{your answer here}}
+The value of '{comment.text}' goes right below the author name and horizontal rule on the rendered page. We see it embedded within the <Comment> tag in that 'CommentList' variable, and it was set with the 'ref="text"' attribtute on the input tag within the 'CommentForm' variable.
 
 # CommentForm
 ```javascript
