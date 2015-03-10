@@ -62,12 +62,11 @@ The url is ultimately passed on from the ``React.render`` call.
 
 ### Q7: What would happen to the statement ``this.setState`` if ``bind(this)`` is removed? Why?
 
-{{your answer here}}
+Bind links the object to the object that calls it. If these aren't implemented, returning data may not function correctly. 
 
 ### Q8: Who calls ``loadCommentsFromServer``? When? 
 
-{{your answer here}}
-
+It called within the function ``componentDidMount`` which is called automatically by React when a component is rendered.
 
 ```javascript
 	
@@ -113,26 +112,24 @@ The url is ultimately passed on from the ``React.render`` call.
 
 ### Q9: What is the purpose of ``this.state``? How is this different from ``this.props``?
 
-{{your answer here}}
+The difference is that ``this.props`` is immutable and owned by the parent and ``this.state`` "is private to the component" and is mutable.  When the state changes, we want the comment box to change (by using this.state).
 
 ### Q10: What is the initial value of ``this.state.data``? How is the initial value specified?
 
-{{your answer here}}
-
+The inital state is an empty data array, declared in the ``getInitialState`` function.
 
 ### Q11: What is the new value of ``this.state.data``? How is this new value set?
 
-{{your answer here}}
+It is updated from the server, as new data is pulled from the commentList render.
 
 
 ### Q12: What is the purpose of ``componentDidMount`` callback?
 
-{{your answer here}}
+It allows us to dynamically update the list from the server through the ``this.setState()`` function.
 
 ### Q13: What is the purpose of ``getInitialState``?
 
-{{your answer here}}
-
+``getInitialState`` executes exactly once during the lifecycle of the component and sets up the initial state of the component.
 
 # CommentList
 
@@ -160,15 +157,15 @@ var CommentList = React.createClass({
 ```
 ### Q14: How does the value of ``this.props.data`` get set?
 
-{{your answer here}}
+It is declared in the data variable in tutorial8.js. IT is data in JSON format.
 
 ### Q15: What is the value of ``commentNodes``?
 
-{{your answer here}}
+commentNodes contains a particular comment and author.
 
 ### Q16: Where does the value of ``{comment.text}`` go on the rendered page?
 
-{{your answer here}}
+The value goes under the appropriate user: the one who submitted the comment.
 
 # CommentForm
 ```javascript
@@ -204,16 +201,16 @@ React.render(
 
 ### Q17: What is the purpose of ``e.preventDefault()``?
 
-{{answer here}}
+It prevents the null Default fields.
 
 ### Q18: What is the value of ``this.props.onCommentSubmit``? What does it get specified?
 
-{{answer here}}
+It assigns the author textbox to the author tag and the text textbox to the text tag within the comment submission.
 
 ### Q19: Where does ``this.refs.author`` point to?
 
-{{answer here}}
+It points to the author field to be submitted.
 
 ### Q20: What does ``getDOMNode()`` do?
 
-{{answer here}}
+It retreives the native browser DOM element.
